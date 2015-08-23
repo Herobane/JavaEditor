@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <target name="clean">
+        <delete dir="bin/" />
+        <delete dir="exe" />
+    </target>
+    <target name="compile" depends="clean">
+        <mkdir dir="bin" />
+        <javac srcdir="src" destdir="bin" />
+    </target>
+    <target name="jar" depends="compile">
+        <mkdir dir="exe"/>
+        <jar destfile="exe/JavaEditor.jar">
+            <manifest>
+                <attribute name="Main-Class" value="com.herobane.javaeditor.Main" />
+            </manifest>
+        </jar>
+    </target>
+    <target name="run" depends="jar">
+        <java jar="exe/JavaEditor.jar" fork="true" />
+    </target>
+</project>

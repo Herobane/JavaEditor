@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT preferences (window, font)>
+<!ELEMENT window (width, height)>
+<!ELEMENT width (#PCDATA)>
+<!ELEMENT height (#PCDATA)>
+<!ELEMENT font (name, style, size)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT style (#PCDATA)>
+<!ELEMENT size (#PCDATA)>

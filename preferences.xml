@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE preferences SYSTEM "preferences.dtd">
+<preferences>
+	<window>
+		<width>780</width>
+		<height>540</height>
+	</window>
+	<font>
+		<name>Arial</name>
+		<style>3</style>
+		<size>32</size>
+	</font>
+</preferences>
