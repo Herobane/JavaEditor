@@ -26,4 +26,5 @@
     <target name="run">
         <java jar="build/JavaEditor.jar" fork="true" />
     </target>
+    <target name="build" depends="clean,compile,jar"/>
 </project>
