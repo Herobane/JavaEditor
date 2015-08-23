@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <target name="clean">
-        <delete dir="bin/" />
-        <delete dir="exe" />
+        <delete dir="bin" />
+        <delete dir="build" />
     </target>
-    <target name="compile" depends="clean">
+    <target name="compile">
         <mkdir dir="bin" />
         <javac srcdir="src" destdir="bin" />
     </target>
-    <target name="jar" depends="compile">
-        <mkdir dir="exe"/>
-        <jar destfile="exe/JavaEditor.jar">
+    <target name="jar">
+        <mkdir dir="build"/>
+        <jar destfile="build/JavaEditor.jar" basedir="bin">
             <manifest>
                 <attribute name="Main-Class" value="com.herobane.javaeditor.Main" />
             </manifest>
         </jar>
+        <copy todir="build">
+            <fileset dir=".">
+                <include name="SplashScreen.png" />
+                <include name="preferences.dtd" />
+                <include name="preferences.xml" />
+            </fileset>
+        </copy>
     </target>
-    <target name="run" depends="jar">
-        <java jar="exe/JavaEditor.jar" fork="true" />
+    <target name="run">
+        <java jar="build/JavaEditor.jar" fork="true" />
     </target>
 </project>
