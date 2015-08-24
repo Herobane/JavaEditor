@@ -32,12 +32,11 @@ public class SplashScreen  {
 		splashscreen.setVisible(true);
 		splashscreen.setSize(image.getWidth(), image.getHeight());
 		splashscreen.setLocationRelativeTo(null);
+        splashscreen.dispose();
 
 		try {
-			new Frame();
-			Thread.sleep(3000);
-			if(splashscreen != null)
-                splashscreen.dispose();
+		    Thread.sleep(2500);
+		    new Frame();
 		} catch(InterruptedException ie) {
 			System.err.println("Error : InterruptedException");
 		}
